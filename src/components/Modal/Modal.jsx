@@ -12,7 +12,7 @@ export default function Modal({onClick, children}) {
         return () => {
             window.removeEventListener('keydown', closeModal);
         };
-    }, []);
+    }, [onClick]);
 
     const closeModal = ({ target, currentTarget, code }) => {
         if (target === currentTarget || code === "Escape") {
